@@ -1,0 +1,12 @@
+<div>
+  <h2>Users List</h2>
+  <mat-form-field>
+    <mat-label>Total users</mat-label>
+    <mat-select (selectionChange)="totalUsersSelected($event)" [(value)]="totalListValue">
+      <mat-option *ngFor="let user of totalUsers" [value]="user.value">
+        {{user.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <app-users-list [totalUsers]="totalListValue"></app-users-list>
+</div>
