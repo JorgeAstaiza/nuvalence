@@ -30,7 +30,6 @@ export class UsersComponent {
   }
 
   public userDetailsSelected(user: Result) {
-    console.log(user);
     this.userService.updateUserDetails(user);
     this.router.navigate(['/details']);
   }
@@ -39,7 +38,6 @@ export class UsersComponent {
     this.userService
       .getUsers(this.totalListValue, 'nuvalence')
       .subscribe((res) => {
-        console.log(res.results);
         this.userList = res.results;
       });
   }

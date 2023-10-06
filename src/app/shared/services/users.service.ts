@@ -17,8 +17,6 @@ export class UsersService {
   }
 
   updateUserDetails(user: Result) {
-    console.log(user);
-
     this.userDetails.next(user);
   }
 }
