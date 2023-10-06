@@ -1,21 +1,24 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Result, Users } from '../interface/user.interface';
-import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
-
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UsersService {
   URL = `${environment.baseUrl}`;
-
-  constructor(
-    private http: HttpClient
-  ) { }
+  userDetails = new BehaviorSubject<any>([]);
+  constructor(private http: HttpClient) {}
 
   getUsers(results: number, seed = 'nuvalence'): Observable<Users> {
-    return this.http.get<Users>(`${this.URL}?results=${results}&seed=${seed}`)
+    return this.http.get<Users>(`${this.URL}?results=${results}&seed=${seed}`);
+  }
+
+  updateUserDetails(user: Result) {
+    console.log(user);
+
+    this.userDetails.next(user);
   }
 }

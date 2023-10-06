@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UsersComponent should do match with snapshot 1`] = `
+"<div class="container"><mat-form-field><mat-label>Total users</mat-label><mat-select><mat-option> list of 10 users </mat-option><mat-option> list of 20 users </mat-option><mat-option> list of 30 users </mat-option><mat-option> list of 40 users </mat-option><mat-option> list of 50 users </mat-option><!--bindings={
+  "ng-reflect-ng-for-of": "[object Object],[object Object"
+}--></mat-select></mat-form-field><app-users-list></app-users-list></div>"
+`;

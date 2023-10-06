@@ -4,12 +4,16 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'users-list',
+    redirectTo: 'list',
     pathMatch: 'full'
   },
   {
-    path: '',
+    path: 'list',
     loadChildren: () => import('./pages/users/users.module').then((m) => m.UsersModule)
+  },
+  {
+    path: 'details',
+    loadChildren: () => import('./pages/users-details/users-details.module').then((m) => m.UsersDetailsModule)
   }
 ];
 

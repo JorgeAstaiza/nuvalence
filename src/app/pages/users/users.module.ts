@@ -17,6 +17,6 @@ import {MatSelectModule} from '@angular/material/select';
     UsersRoutingModule,
     UsersListComponent,
     MatSelectModule
-  ]
+  ],
 })
 export class UsersModule { }

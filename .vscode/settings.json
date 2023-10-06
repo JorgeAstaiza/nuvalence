@@ -1,0 +1,11 @@
+{
+    "editor.language.brackets": [],
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "workbench.sideBar.location": "right",
+    "workbench.editor.showTabs": true,
+    "editor.minimap.enabled": false,
+    "editor.scrollbar.vertical": "auto",
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.formatOnSave": true,
+    "breadcrumbs.enabled": false
+}
